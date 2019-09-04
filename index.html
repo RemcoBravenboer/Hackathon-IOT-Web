@@ -3,62 +3,69 @@
 <head>
     <title>Security Panel</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
-<div class="navbar navbar-dark bg-dark">
-    <p class="text-center" style="color: white">Security Company</p>
-</div>
-<div class="row">
-    <div class="col-lg-2"  style="padding-right: 0!important">
-        <div class="card">
+    <div class="navbar navbar-dark bg-dark">
+        <p class="title">Security Company</p>
+    </div>
+    <div class="row">
+        <div class="col-lg-2" style="padding-right: 0!important">
+            <div class="card">
                 <h5 class="card-header card text-white bg-secondary mb-3">Menu</h5>
-                <div class="card-body" style="padding: 0;">
-                	<ul style="list-style-type: none; font-size:24px;">
-                		<li><a href="#" style="color: #6c757d!important">Home</a></li>
-                		<li><a href="#" style="color: #6c757d!important">History</a></li>
+                <div class="card-body sideMenu">
+                	<ul>
+                		<li><a onclick="loadPanel('notifications')">Notifications</a></li>
+                		<li><a onclick="loadPanel('history')">History</a></li>
                 	</ul>
                 </div>
             </div>
-    </div>
-    <div class="col-lg-10">
-        <div class="container" style="padding-left:0px!important">
-            <div class="card">
-                <h5 class="card-header card text-white bg-danger mb-3">Notifications</h5>
-                <div class="card-body">
-                	<div class="row">
-                		<div class="col-lg-9">
-                			<h5 class="card-title"><b>Company:</b> Rabobank</h5>
-                    		<p class="card-text"><b>Address:</b> Wibautstraat 451</p>
-                    		<p class="card-text"><b>Pressed Button ID:</b> 42B0</p>
-                    		<br><br>
-                    	</div>
-                		<div class="col-lg-3">
-                			<img width="150px" class="float-right" src="https://thumbs.gfycat.com/ImpoliteTepidCrab.webp">
-                            <button type="button" class="btn btn-success float-right">Notification handled</button>
-							</div>
-                		</div>
-                	</div>
-                    
-                </div>
-                <hr>
-                <div class="card-body">
+        </div>
+        <div class="col-lg-10">
+            <div class="container">
+                <div class="card" id="panelNotifications">
+                    <h5 class="card-header card text-white bg-danger mb-3">Notifications</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h5 class="card-title"><b>Company:</b> Rabobank</h5>
+                                <p class="card-text"><b>Address:</b> Wibautstraat 451</p>
+                                <p class="card-text"><b>Pressed Button ID:</b> 42B0</p>
+                            </div>
+                            <div class="col-lg-3">
+                               <img width="150px" class="float-right" src="https://thumbs.gfycat.com/ImpoliteTepidCrab.webp">
+                               <button type="button" class="btn btn-success float-right">Notification handled</button>
+                           </div>
+                       </div>
+                   </div>
+                   <hr/>
+                   <div class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     <a href="#" class="btn btn-primary float-right">Go somewhere</a>
                 </div>
-                <hr>
+            </div>
+
+            <div class="card" id="panelHistory">
+                <h5 class="card-header card text-white bg-info mb-3">History</h5>
+                <div class="card-body">
+                    <h5 class="card-title"><b>Company:</b> ING</h5>
+                    <p class="card-text"><b>Address:</b> Weesperzijde 13 451</p>
+                    <p class="card-text"><b>Pressed Button ID:</b> 38B2</p>
+                </div>
+                <hr/>
                 <div class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -67,6 +74,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 </body>
 <script src="main.js"></script>
