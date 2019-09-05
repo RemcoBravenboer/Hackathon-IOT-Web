@@ -16,6 +16,10 @@ ul li a {
 	padding: 0;
 }
 
+#menuN {
+	font-weight: bold;
+}
+
 #panelHistory {
 	display: none;
 }
@@ -26,6 +30,7 @@ ul li a {
 	font-weight: bold;
 }
 
-.container { 
+.container {
 	padding-left: 0px;
 }
+
